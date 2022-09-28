@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
